@@ -12,8 +12,8 @@
 
 3.アプリケーション内で使用している技術一覧
 
-・ruby
-・ruby on rails
-・mysql
-・html&CSS
+　・ruby
+　・ruby on rails
+　・mysql
+　・html&CSS
 

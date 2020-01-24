@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @article.content %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @article.name %>
+</p>
+<strong>Felling:</strong>
+  <%= @article.feeling %>
+
+<%= link_to "編集フォームへ", edit_article_path(@article) %> |
+<%= link_to "最初のページに戻る", welcome_index_path %>

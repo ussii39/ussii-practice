@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Articles</h1>
+<%= form_tag('/articles', method: 'get') do %>
+  <%= label_tag(:name_key, 'Search name:') %>
+  <%= text_field_tag(:name_key) %>
+  <%= submit_tag('Search') %> <%= link_to 'Clear', articles_path %>
+<% end %>
+
+<br>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th>Name</th>
+      <th>feeling<th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.content %></td>
+        <td><%= article.name %></td>
+        <td><%= article.feeling %></td>
+        <td><%= link_to 'Show', article %></td>
+        <td><%= link_to 'Edit', edit_article_path(article) %></td>
+        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Article', new_article_path %>
